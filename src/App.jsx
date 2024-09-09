@@ -1,4 +1,3 @@
-import { document } from "postcss"
 import { useState, useRef, useEffect } from "react"
 
 function App() {
@@ -11,7 +10,7 @@ function App() {
 
   const [focusPoint, setFocusPoint] = useState(() => {
     let savedValue = localStorage.getItem('focusPoint')
-    return savedValue ? JSON.parse(savedValue) : 'Changing the Focus Point!'
+    return savedValue ? JSON.parse(savedValue) : 'Click to change...'
   })
 
   function handleChange(e) {
