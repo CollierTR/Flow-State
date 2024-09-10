@@ -27,18 +27,21 @@ function App() {
   }, [focusPoint])
 
   return (
-    <div className="flex flex-col gap-6 justify-center place-items-center text-white text-8xl h-screen relative bg-black">
-      <h1 className="text-2xl">Current Focus:</h1>
-      <p onClick={() => setModalOpen(!modalOpen)} className="cursor-pointer text-red-800">{focusPoint}</p>
+    <div className="bg-black relative">
+      <div className="w-3/4 mx-auto flex flex-col gap-6 justify-center place-items-center text-white text-4xl lg:text-8xl text-center text-pretty h-screen  bg-black">
+        <h1 className="text-lg md:text-2xl">Current Focus:</h1>
+        <p onClick={() => setModalOpen(!modalOpen)} className="cursor-pointer text-red-800">{focusPoint}</p>
 
 
-      <div className={`${modalOpen ? 'block' : 'hidden'} text-6xl bg-black absolute h-3/4 w-3/4 text-red-800 flex flex-col justify-center place-items-center border-2 border-white rounded-xl`}>
-        <form action="" onSubmit={(e) => { handleChange(e) }} className="flex-col gap-4 place-items-center justify-center">
-          <label htmlFor="input">Set Focus Point:</label>
-          <input type="text" ref={inputRef} id="input" name="input" placeholder="Change me..." className="block mt-4 mb-8 py-2 px-4 rounded-lg bg-black border-2 border-white" />
-        </form>
-        <p className="underline absolute top-6 right-6 text-red-800 text-2xl cursor-pointer" onClick={() => { setModalOpen(!modalOpen) }}>CLOSE</p>
+        <div className={`${modalOpen ? 'block' : 'hidden'} text-start text-6xl bg-black absolute h-3/4 w-3/4 text-red-800 flex flex-col justify-center place-items-center border-2 border-white rounded-xl`}>
+          <form action="" onSubmit={(e) => { handleChange(e) }} className="flex-col gap-4 place-items-center justify-center">
+            <label htmlFor="input">Set Focus Point:</label>
+            <input type="text" ref={inputRef} id="input" name="input" placeholder="Change me..." className="block mt-4 mb-8 py-2 px-4 rounded-lg bg-black border-2 border-white" />
+          </form>
+          <p className="underline absolute top-6 right-6 text-red-800 text-2xl cursor-pointer" onClick={() => { setModalOpen(!modalOpen) }}>CLOSE</p>
+        </div>
       </div>
+
     </div>
   )
 }
