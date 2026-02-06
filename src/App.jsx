@@ -40,7 +40,6 @@ function App() {
         >
           {focusPoint}
         </p>
-        // SECT: modal
         <div
           className={`${modalOpen ? "block" : "hidden"} text-start bg-black text-2xl md:text-4xl xl:text-5xl absolute h-3/4 w-3/4 text-red-800 flex flex-col justify-center place-items-center border-2 border-white rounded-xl`}
         >
