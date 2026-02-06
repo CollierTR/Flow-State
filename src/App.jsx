@@ -1,4 +1,6 @@
 import { useState, useRef, useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faX } from "@fortawesome/free-solid-svg-icons";
 
 function App() {
   const [modalOpen, setModalOpen] = useState(true);
@@ -38,9 +40,9 @@ function App() {
         >
           {focusPoint}
         </p>
-
+        // SECT: modal
         <div
-          className={`${modalOpen ? "block" : "hidden"} text-start text-6xl absolute h-3/4 w-3/4 text-red-800 flex flex-col justify-center place-items-center border-2 border-white rounded-xl`}
+          className={`${modalOpen ? "block" : "hidden"} text-start bg-black text-2xl md:text-4xl xl:text-5xl absolute h-3/4 w-3/4 text-red-800 flex flex-col justify-center place-items-center border-2 border-white rounded-xl`}
         >
           <form
             action=""
@@ -60,12 +62,12 @@ function App() {
             />
           </form>
           <p
-            className="underline absolute top-6 right-6 text-red-800 text-2xl cursor-pointer"
+            className="underline absolute top-6 right-6 text-red-800 text-2xl md:text-3xl xl:text-4xl cursor-pointer"
             onClick={() => {
               setModalOpen(!modalOpen);
             }}
           >
-            CLOSE
+            <FontAwesomeIcon icon={faX} />
           </p>
         </div>
       </div>
