@@ -29,8 +29,8 @@ function App() {
   }, [focusPoint]);
 
   return (
-    <div className="bg-black relative">
-      <div className="w-3/4 mx-auto flex flex-col gap-6 lg:gap-8 justify-center place-items-center text-white text-center text-pretty h-screen  bg-black">
+    <div className="relative">
+      <div className="w-3/4 mx-auto flex flex-col gap-6 lg:gap-8 justify-center place-items-center text-white text-center text-pretty h-screen">
         <h1 className="text-2xl lg:text-4xl text-neon-green">Current Focus:</h1>
         <p
           onClick={() => setModalOpen(!modalOpen)}
@@ -40,7 +40,7 @@ function App() {
         </p>
 
         <div
-          className={`${modalOpen ? "block" : "hidden"} text-start text-6xl bg-black absolute h-3/4 w-3/4 text-red-800 flex flex-col justify-center place-items-center border-2 border-white rounded-xl`}
+          className={`${modalOpen ? "block" : "hidden"} text-start text-6xl absolute h-3/4 w-3/4 text-red-800 flex flex-col justify-center place-items-center border-2 border-white rounded-xl`}
         >
           <form
             action=""
@@ -56,7 +56,7 @@ function App() {
               id="input"
               name="input"
               placeholder="Change me..."
-              className="block mt-4 mb-8 py-2 px-4 rounded-lg bg-black border-2 border-white"
+              className="block mt-4 mb-8 py-2 px-4 rounded-lg border-2 border-white"
             />
           </form>
           <p
